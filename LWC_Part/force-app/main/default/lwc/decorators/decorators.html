@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title='Decorators Title'>
+        Object Data=>
+        <br/>
+        FirstName:{contact.FirstName}&emsp;
+        LastName:{contact.LastName}
+        <br/>
+        Primitive Data(Stirng)=>
+        <br/>
+        <br/>
+        Message:{message};
+        <br/>
+        <br/>
+        Value from Get:{FullName};
+        <br/>
+        <br/>
+
+        <!-- Brand variant: Identifies the primary action in a group of buttons -->
+        <lightning-button 
+        variant="brand"
+        label="Change Properties Label" 
+        title="Change Properties Title" 
+        onclick={handleClickChangeButton} 
+        class="slds-m-left_x-small">
+        My First Button
+        </lightning-button>
+           
+    </lightning-card>
+</template>

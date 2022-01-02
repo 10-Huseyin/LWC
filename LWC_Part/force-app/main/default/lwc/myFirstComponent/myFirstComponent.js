@@ -5,7 +5,7 @@ extends LightningElement {
 
 userName='Mary';
 
-myContact={"firstName":"Aliya",
+ myContact={"firstName":"Aliya",
          "lastName":"Kuanwa"   
          };
 
