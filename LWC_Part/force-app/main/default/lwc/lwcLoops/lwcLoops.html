@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="LWC LOOP">
+        <template 
+        for:each={contacts} 
+        for:item="myContactItem"
+        for:index="index">
+        <p key={contacts.contactindex}>
+            Ite-Index:{index};
+            First-Name:{myContactItem.FirstName};
+            Last-Name:{myContactItem.LastName};
+        </p>
+       
+        LWC Iterator
+        <template iterator:mycontact={contacts}>
+            <p key={mycontact.value.contactindex}>
+                Index:{myContact.index}
+                First-Name:{mycontact.value.FirstName};
+                Last-Name:{mycontact.value.LastName};
+                <template if:true={mycontact.first}>
+                    =>This is the first entry
+                </template>
+                <template if:true={mycontact.last}>
+                    =>This is the last entry
+                </template>
+            </p>
+        </template>
+    </template>
+    </lightning-card>
+</template>
