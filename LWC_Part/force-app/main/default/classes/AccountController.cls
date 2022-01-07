@@ -4,7 +4,7 @@ public inherited sharing class AccountController {
     public static List<Account> getAccounts(){
         List<Account> accounts = [
             SELECT Name, BillingState, Type, Phone
-            FROM Account
+            FROM Account WITH SECURTITY_ENFORCED
         ];
         return accounts;
     }
@@ -22,12 +22,13 @@ public inherited sharing class AccountController {
         List<Account> accounts = [
             SELECT Name, BillingState, Type, Phone
             FROM Account
-            WHERE Name LIKE :queryParameter
+            WHERE Name LIKE :queryParameter 
+            //WITH SECURITY ENHANCMENT
         ];
         return accounts;
     }
-     //Integer i = 10/0; we just typed to get error
-     return accounts;
+     //Integer i = 10/0; //we just typed to get error
+     //return accounts;
 }
 
 

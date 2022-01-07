@@ -1,6 +1,6 @@
 import { LightningElement, api } from 'lwc';
 
-export default class LwcChild extends LightningElement {
+export default class lwcChildComponent extends LightningElement {
     @api messageInChild = 'This message is of Child component';
 
     @api handleParentCall(message) {
