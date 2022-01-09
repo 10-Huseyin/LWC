@@ -1,6 +1,6 @@
 import { LightningElement , api } from 'lwc';
 
-export default class LwcLifeCycleHooks extends LightningElement {
+export default class LwcLifecycleHooks extends LightningElement {
     @api publicProperty = 'This is default publicProperty';
     privateProperty = 'This is default privateProperty';
 
@@ -27,5 +27,9 @@ export default class LwcLifeCycleHooks extends LightningElement {
     renderedCallback() {
         console.log('privateProperty change: ', this.privateProperty);
         //this.privateProperty = this.privateProperty + ' a';
+    }
+
+    disconnectedCallback() {
+        alert('The child component is removed');
     }
 }

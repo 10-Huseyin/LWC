@@ -2,8 +2,16 @@
     <lightning-card title="Hooks in LWC">
         Hello there!
         <br/>
-        <c-lwc-life-cycle-hooks 
-            public-property="This is value passed from Parent in publicProperty"
-        ></c-lwc-life-cycle-hooks>
+        <lightning-input
+            label="Hide/Show child component"
+            variant="brand"
+            type="checkbox"
+            onchange={handleShowHideChild}
+        ></lightning-input>
+        <template if:true={showChild}>
+            <c-lwc-lifecycle-hooks 
+                public-property="This is value passed from Parent in publicProperty"
+            ></c-lwc-lifecycle-hooks>
+        </template>
     </lightning-card>
 </template>
