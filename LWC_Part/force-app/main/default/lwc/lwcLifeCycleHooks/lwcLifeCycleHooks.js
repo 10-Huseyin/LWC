@@ -1,6 +1,6 @@
 import { LightningElement , api } from 'lwc';
 
-export default class LwcLifecycleHooks extends LightningElement {
+export default class lwcLifecycleHooks extends LightningElement {
     @api publicProperty = 'This is default publicProperty';
     privateProperty = 'This is default privateProperty';
 
